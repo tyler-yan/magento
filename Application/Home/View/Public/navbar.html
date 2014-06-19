@@ -1,0 +1,25 @@
+
+	<div class="navbar">
+		<h1 class="logo"><a href="__ROOT__/"><img src="__PUBLIC__/images/logo.png" title="" alt="logo"/></a></h1>
+		<if condition="$controller=='Index'"> <a href="__ROOT__/" class="mindex active">
+			<else /> <a href="__ROOT__/" class="mindex">
+        </if>
+    	<i class="icon icon-house"></i> 主 页</a>
+		<a  class="search" href="javascript:toggleSearch();">快速定位 ?</a>
+		<ul class="menu">
+			<li>
+				<a href="__ROOT__/Website/index.html">站 点</a></li>
+			<li>
+				<if condition="$controller=='Blog'"><a href="__ROOT__/Blog/index.html" class="active">
+					<else /> <a href="__ROOT__/Blog/index.html">
+		        </if>博 客</a></li>
+		</ul>
+	</div>
+	<div class="search-model">
+			 <div class="search-body">
+			 	<?php $tags = R('Public/tags_all'); echo $tags; ?>
+       </div>
+       <div class="search-footer">
+          <a href="javascript:toggleSearch();" class="btn-colose"><--- 关 闭</a>
+       </div>
+	</div>
